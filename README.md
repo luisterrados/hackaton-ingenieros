@@ -11,7 +11,7 @@
 ## 📦 Material complementario
 ### 1. API rest de consulta del nivel de llenado de los contenedores
 ```
-GET https://.../containers/measurements
+GET https://hackaton-campus-sostenible-api.mmartinez-d6a.workers.dev/containers/measurements
 [
   {
     "id": "CONT-001",
@@ -27,7 +27,7 @@ GET https://.../containers/measurements
 ]
 ```
 
-Las peticiones deben incluir la cabecera: `Authentication: Bearer campus-sostenible-2025`
+Las peticiones deben incluir la cabecera: `Authorization: Bearer campus-sostenible-2025`
 
 > Esta API no incluye información de ubicación ni facultad. Esa información se entrega en un archivo .json aparte, que debe importarse y gestionarse desde tu backend.
 
