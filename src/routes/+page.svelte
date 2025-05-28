@@ -1,6 +1,7 @@
 <script lang="ts">
 
     import {onMount} from "svelte";
+    import tailwindcss from "@tailwindcss/vite";
     import ContainerCard from "$lib/components/ContainerCard.svelte";
     let contenedores: Array<any> = [];
 
