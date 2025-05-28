@@ -50,6 +50,7 @@
     }
 </style>
 
+<div class="p-2 w-full sm:w-2/3 md:w-1/2 p-4 flex flex-col items-center items-stretch gap-2 mx-auto">
 <h1>Contenedores por Centro</h1>
 
 {#each Object.entries(groupedContainers) as [centerName, containersInCenter]}
@@ -64,3 +65,4 @@
     {/each}
 </ul>
 {/each}
+</div>
