@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import {onMount} from "svelte";
+    import {onMount} from "svelte"
     import ContainerCard from "$lib/components/ContainerCard.svelte";
     let contenedores: Array<any> = [];
 
@@ -9,32 +9,30 @@
 </script>
 
 <style>
-    .contenedor-principal {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 1rem;
-    }
-
     h1 {
         text-align: center;
         font-size: 2.5rem;
         margin-bottom: 2rem;
     }
-
-    .contenedor {
-        padding: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 0.5rem;
-        margin-bottom: 1rem;
-    }
-
-
 </style>
 
 <h1>Contenedores</h1>
+<ul>
+    {#each contenedores as contenedor}
+        <li>
+            <a href="/{contenedor.id}">
+                <ContainerCard container={contenedor}/>
 
+<<<<<<< HEAD
 {#each data.containers as contenedor}
     <ContainerCard container={contenedor}>
         
     </ContainerCard>
 {/each}
+=======
+            </a>
+        </li>
+    {/each}
+</ul>
+
+>>>>>>> refs/remotes/origin/main
