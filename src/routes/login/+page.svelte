@@ -15,14 +15,14 @@
 >
     <h2 class="title font-bold text-lg self-center mb-4">Iniciar sesión</h2>
     <form action="?/signIn" method="POST">
-        <label for="phone" class="label"><b>Número de teléfono</b></label>
+        <label for="email" class="label"><b>Correo electronico</b></label>
         <input
-            type="tel"
-            name="phone"
-            id="phone"
+            type="email"
+            name="email"
+            id="email"
             class="input w-full mb-2 border"
-            placeholder="Número de teléfono"
-            value={form?.phone ?? ''}
+            placeholder="Correo electronico"
+            value={form?.email ?? ''}
             required
         />
 

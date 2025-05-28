@@ -27,6 +27,7 @@
 	"dependencies": {
 		"@lucide/svelte": "^0.511.0",
 		"@supabase/ssr": "^0.6.1",
-		"@supabase/supabase-js": "^2.49.8"
+		"@supabase/supabase-js": "^2.49.8",
+		"chart.js": "^4.4.9"
 	}
 }

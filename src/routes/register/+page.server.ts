@@ -4,14 +4,14 @@ export const actions: Actions = {
 
     signUp: async ({ request, locals: {supabase} }) => {
 
-        const { phone, name, password } = Object.fromEntries(await request.formData()) as {
-            phone: string
+        const { email, name, password } = Object.fromEntries(await request.formData()) as {
+            email: string
             name: string
             password: string
         }
 
         const { error: authError } = await supabase.auth.signUp({
-            phone: phone,
+            email: email,
             password: password,
             options: {
                 data: {

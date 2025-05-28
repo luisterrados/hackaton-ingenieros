@@ -4,19 +4,19 @@ export const actions: Actions = {
 
     signIn: async ({ request, locals: { supabase } }) => {
 
-        const { phone, password } = Object.fromEntries(await request.formData()) as {
-            phone: string
+        const { email, password } = Object.fromEntries(await request.formData()) as {
+            email: string
             password: string
         }
 
         const { error: authError } = await supabase.auth.signInWithPassword({
-            phone: phone,
+            email: email,
             password: password
         });
 
         if (authError) {
             if (authError.code === 'invalid_credentials') {
-                return fail(400, {phone, incorrect: true});
+                return fail(400, {email, incorrect: true});
             } else {
                 return error(400, authError.message); 
             }

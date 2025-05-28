@@ -34,14 +34,14 @@
 >
     <h2 class="title font-bold text-lg self-center mb-4">Crear cuenta</h2>
     <form action="?/signUp" method="POST">
-        <label for="phone-number" class="label"><b>Número de teléfono</b></label
+        <label for="email" class="label"><b>Correo electronico</b></label
         >
         <input
-            id="phone"
-            name="phone"
+            id="email"
+            name="email"
             type="tel"
             class="input w-full mb-3 border"
-            placeholder="Número de teléfono"
+            placeholder="Correo electronico"
             required
         />
 
