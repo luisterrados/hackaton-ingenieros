@@ -10,7 +10,6 @@ export const load: PageServerLoad = async () => {
         const filePath = path.resolve('static/data/containers.json');
         const jsonContent = readFileSync(filePath, 'utf-8');
         const datos = JSON.parse(jsonContent);
-        console.log("Datos recibidos");
         return {
             containers: datos
         };

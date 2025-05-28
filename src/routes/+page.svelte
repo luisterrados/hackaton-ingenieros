@@ -18,10 +18,10 @@
 
 <h1>Contenedores</h1>
 <ul>
-    {#each contenedores as contenedor}
+    {#each data.containers as contenedor}
         <li>
             <a href="/{contenedor.id}">
-                <ContainerCard container={contenedor}/>
+                <ContainerCard container={contenedor}/> 
             </a>
         </li>
     {/each}
