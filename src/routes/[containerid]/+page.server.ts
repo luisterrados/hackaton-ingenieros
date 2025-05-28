@@ -1,15 +1,11 @@
+import type { Container } from "$lib/types/Container";
+
 const url = 'https://hackaton-campus-sostenible-api.mmartinez-d6a.workers.dev/containers/measurements';
 const token = 'Bearer campus-sostenible-2025';
 
 export async function load({params}){
-    type ContainerHistory = {
-        timestamp: string;
-        levelPercent: number;
-    }
-    type Container = {
-        id: string
-        history: ContainerHistory[]
-    }
+
+  const containerId = params.containerid
 
 const response = await fetch(url, {
   method: 'GET', 
@@ -20,9 +16,7 @@ const response = await fetch(url, {
 })
 const data = await response.json();
 const containers: Container[] = data as Container[];
-const containerResult = containers.filter(container => container.id)[0];
-console.log(containerResult);
-
+const containerResult = containers.filter(container => container.id == containerId)[0];
 return {
     container: containerResult
 }
