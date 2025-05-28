@@ -6,7 +6,7 @@
 
 </script>
 
-<div class="card py-2 px-4 rounded-sm shadow-sm hover:bg-primary-100 dark:hover:bg-primary-900 bg-white dark:bg-gray-800">
+<div class="card py-2 px-4 rounded-sm hover:preset-tonal-primary preset-filled-surface-50-950 shadow-sm">
     <p><strong>Tipo:</strong> {container.type}</p>
     <p><strong>Centro:</strong> {container.center}</p>
     <p><strong>Localización:</strong> {container.location}</p>
