@@ -5,10 +5,7 @@
     let contenedores: Array<any> = [];
 
     // Fetch al cargar el componente
-    onMount(async () => {
-        const res = await fetch('/data/containers.json');
-        contenedores = await res.json();
-    });
+    let { data } = $props();
 </script>
 
 <style>
@@ -36,8 +33,8 @@
 
 <h1>Contenedores</h1>
 
-{#each contenedores as contenedor}
+{#each data.containers as contenedor}
     <ContainerCard container={contenedor}>
-
+        
     </ContainerCard>
 {/each}
