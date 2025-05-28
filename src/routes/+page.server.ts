@@ -20,25 +20,4 @@ export const load: PageServerLoad = async () => {
             error: String(err)
         };
     }
-/*    
-fetch(url, {
-  method: 'GET', // o 'POST', 'PUT', etc.
-  headers: {
-    'Authorization': token,
-    'Content-Type': 'application/json' // solo si estás enviando o esperando JSON
-  }
-})
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Error en la respuesta: ' + response.status);
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log('Datos recibidos:', data);
-  })
-  .catch(error => {
-    console.error('Error al hacer fetch:', error);
-  });
-*/
 };
