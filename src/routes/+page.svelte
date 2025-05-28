@@ -31,7 +31,7 @@
         color: #333;
         border-bottom: 2px solid #eee; /* Opcional: una línea para separar las secciones */
         padding-bottom: 0.5rem;
-        text-indent: 2rem;
+        text-indent: 0.9rem;
     }
 
     ul {
@@ -53,14 +53,14 @@
 <h1>Contenedores por Centro</h1>
 
 {#each Object.entries(groupedContainers) as [centerName, containersInCenter]}
-    <h2>{centerName}</h2>
+    <h2>Contenedores de {centerName}</h2>
     <ul>
         {#each containersInCenter as contenedor}
-            <li>
-                <a href="/{contenedor.id}">
-                    <ContainerCard container={contenedor}/>
-                </a>
-            </li>
-        {/each}
-    </ul>
+        <li>
+            <a href="/{contenedor.id}">
+                <ContainerCard container={contenedor}/> 
+            </a>
+        </li>
+    {/each}
+</ul>
 {/each}

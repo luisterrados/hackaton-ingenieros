@@ -4,5 +4,5 @@
     let { data } = $props();
 </script>
 <div>
-    Conteiner{data.container.id}
+    ID del contenedor: {data.container.id}
 </div>
