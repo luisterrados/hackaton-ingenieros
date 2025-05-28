@@ -20,9 +20,14 @@
 </style>
 
 <h1>Contenedores</h1>
+<ul>
+    {#each contenedores as contenedor}
+        <li>
+            <a href="/{contenedor.id}">
+                <ContainerCard container={contenedor}/>
 
-{#each contenedores as contenedor}
-    <ContainerCard container={contenedor}>
+            </a>
+        </li>
+    {/each}
+</ul>
 
-    </ContainerCard>
-{/each}
